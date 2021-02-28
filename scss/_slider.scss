@@ -1,0 +1,70 @@
+.slider
+{
+
+    position: relative;
+    &__slide
+    {
+        padding: 40px 0;
+    }
+    &__arrow
+    {
+        
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+        font-size: 4rem;
+        color: $primary-color;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        &--prev
+        {
+            left: 0;
+        }
+        &--next
+        {
+            right: 0;
+        }
+        @include hover
+        {
+            transform: scale(1.2);
+        }
+    }
+    &__dots
+    {
+        list-style-type: none;
+        padding: 0 70px;
+        text-align: center;
+        margin: 0;
+        li
+        {
+        display: inline-block;
+            button
+            {
+                width: 14px;
+                height: 14px;
+                padding: 0;
+                outline: 0;
+                font-size: 0;
+                border: $border-width solid #fff;
+                background-color: $primary-color;
+                border-radius: 50%;
+                @include hover
+                {
+                    border-color: $primary-color;
+                    background-color: #fff;
+                }
+            }
+            &.slick-active button
+            {
+                    border-color: $primary-color;
+                    background-color: #fff;
+            }
+
+        }   
+    }
+    
+    
+}
